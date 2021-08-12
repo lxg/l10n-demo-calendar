@@ -25,10 +25,7 @@
         "directory": "l10n",
         "instance": "this._l10n",
         "locales": [
-            "de-DE",
-            "nl-BE",
-            "fr-BE",
-            "en-US"
+            "de-DE"
         ],
         "sources": [
             "src/**/*.js"
