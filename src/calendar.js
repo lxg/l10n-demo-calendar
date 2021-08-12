@@ -36,7 +36,7 @@ class Calendar extends HTMLElement
             const padColsBefore = (7 - dayOffset + firstDayWeekday) % 7
             const padColsAfter = 7 - ((monthLength + firstDayWeekday - dayOffset) % 7);
 
-            let rows = `<tr>${this._date.getWeekdaysShort().map(day => `<th>${day}</th>`).join('')}</tr>`
+            let rows = `<tr>${this._date.shiftWeekdays(this._date.getWeekdaysShort()).map(day => `<th>${day}</th>`).join('')}</tr>`
             let row = "<tr>"
 
             if (padColsBefore) {
