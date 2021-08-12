@@ -4,7 +4,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/calendar.js:47
+#: src/calendar.js:48
 msgctxt "date format"
 msgid "l, F j, Y"
 msgstr "l, j. F Y"
+
+#: src/calendar.js:95
+msgid "This is an example of a calendar, showing how the <a href='%s'>l10n library</a> works."
+msgstr "Dies ist ein Beispiel für einen Kalender, das zeigt, wie die <a href='%s'>l10n-Library</a> funktioniert."

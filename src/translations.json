@@ -3,6 +3,7 @@
     "p": "(n != 1)",
     "t": {
       "date format\u0004l, F j, Y": "l, j. F Y",
+      "This is an example of a calendar, showing how the <a href='%s'>l10n library</a> works.": "Dies ist ein Beispiel für einen Kalender, das zeigt, wie die <a href='%s'>l10n-Library</a> funktioniert.",
       "_\u00041": "1",
       "_\u0004Sun": "So",
       "_\u0004Mon": "Mo",

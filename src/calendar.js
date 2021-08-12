@@ -31,6 +31,7 @@ class Calendar extends HTMLElement
             const dayOffset = this._date.getFirstDayOfWeek() // 0: Sunday, 1: Monday
             const year = parseInt(this.getAttribute("year"))
             const month = parseInt(this.getAttribute("month"))
+            const date = new Date(year, month - 1, 1)
             const monthLength = (new Date(Date.UTC(year, month, 0))).getDate()
             const firstDayWeekday = (new Date(Date.UTC(year, month - 1, 1))).getDay()
             const padColsBefore = (7 - dayOffset + firstDayWeekday) % 7
@@ -62,8 +63,20 @@ class Calendar extends HTMLElement
 
         this.shadow.innerHTML = `
             <style>
+                div {
+                    margin: 3rem 0;
+                    padding: 1rem;
+                    background: #f3f3f3;
+                }
+
                 table {
+                    width: 100%;
                     border-collapse: collapse;
+                }
+
+                caption {
+                    margin: 0 0 1rem;
+                    font-weight: bold;
                 }
 
                 th, td {
@@ -73,13 +86,21 @@ class Calendar extends HTMLElement
                 }
 
                 th {
-                    background: #eee;
+                    background: #444;
+                    color: #fff;
+                    font-weight: normal;
                 }
             </style>
 
-            <table>
-                <tbody>${rows}</tbody>
-            </table>
+            <p>${this._l10n.t("This is an example of a calendar, showing how the <a href='%s'>l10n library</a> works.")
+                .replace('%s', 'https://github.com/lxg/l10n/')}</p>
+
+            <div>
+                <table>
+                    <caption>${this._dform.fmt(date, "F Y")}</caption>
+                    <tbody>${rows}</tbody>
+                </table>
+            </div>
         `
     }
 }
