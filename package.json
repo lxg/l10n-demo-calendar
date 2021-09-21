@@ -9,7 +9,7 @@
         "dev:html": "npx browser-sync start --watch --server --port 8081 --files 'dist/*' --index src/index.html"
     },
     "dependencies": {
-        "@lxg/l10n": "^2.1.1",
+        "@lxg/l10n": "^2.3.0",
         "@rollup/plugin-json": "^4.1.0",
         "@rollup/plugin-node-resolve": "^13.0.0",
         "@rollup/plugin-replace": "^2.3.4",
